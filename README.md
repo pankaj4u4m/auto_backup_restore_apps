@@ -32,3 +32,8 @@ auto is used to mark a package as being automatically installed, which will caus
 
 apt-mark manual
 manual is used to mark a package as being manually installed, which will prevent the package from being automatically removed if no other packages depend on it.
+
+
+# Installation
+Place /etc/rc.local file from this project to systems /etc/rc.local.
+Script will automatically run at the start of system.
