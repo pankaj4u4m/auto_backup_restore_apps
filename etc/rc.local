@@ -5,5 +5,5 @@ mkdir ~/.apt-mark
 apt-mark showauto > ~/.apt-mark/pkgs_auto.lst
 apt-mark showmanual > ~/.apt-mark/pkgs_manual.lst
 
-apt-mark auto $(cat ~/.apt-mark/pkgs_auto.lst)
-apt-mark manual $(cat ~/.apt-mark/pkgs_manual.lst)
+apt-mark auto $(cat ~/.apt-mark/pkgs_auto.lst) > ~/.apt-mark/apt-mark.log
+apt-mark manual $(cat ~/.apt-mark/pkgs_manual.lst) >> ~/.apt-mark/apt-mark.log
