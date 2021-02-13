@@ -1,0 +1,9 @@
+#!/bin/bash
+# Backup and restore apps. Works nicely with timeshift backup.
+mkdir ~/.apt-mark
+
+apt-mark showauto > ~/.apt-mark/pkgs_auto.lst
+apt-mark showmanual > ~/.apt-mark/pkgs_manual.lst
+
+apt-mark auto $(cat ~/.apt-mark/pkgs_auto.lst)
+apt-mark manual $(cat ~/.apt-mark/pkgs_manual.lst)
